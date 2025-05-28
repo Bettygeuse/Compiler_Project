@@ -1,0 +1,26 @@
+digraph G {
+bb0:s -> bb1:n ;
+bb1:s -> bb2:n;
+bb2:s -> bb3:n [label="fall-through"];
+bb3:s -> bb4:n;
+bb4:s -> bb5:n [label="fall-through"];
+bb5:s -> bb6:n;
+bb6:s -> bb7:n [label="fall-through"];
+bb7:s -> bb6:n [label="branch"];
+bb6:s -> bb8:n [label="branch"];
+bb4:s -> bb9:n [label="branch"];
+bb8:s -> bb4:n [label="branch"];
+bb2:s -> bb10:n [label="branch"];
+bb9:s -> bb2:n [label="branch"];
+bb0 [shape=record, label="<b>BB0| {4: const #100|7: const #1|9: const #0|13: const #10|19: const #3}"];
+bb1 [shape=record, label="<b>BB1| {1: read|2: read|3: read}"];
+bb2 [shape=record, label="<b>join\nBB2| { (a) 25: phi (1) (8)| (b) 26: phi (2) (21)| (c) 27: phi (3) (22)| (d) 28: phi (2) (23)|5: CMP (25) (4)|6: BLT (5) (30)}"];
+bb3 [shape=record, label="<b>BB3| {8: ADD (28) (7)}"];
+bb4 [shape=record, label="<b>join\nBB4| { (b) 21: phi (28) (12)| (c) 22: phi (27) (17)| (d) 23: phi (25) (20)|10: CMP (28) (9)|11: BLT (10) (29)}"];
+bb5 [shape=record, label="<b>BB5| {12: ADD (26) (7)}"];
+bb6 [shape=record, label="<b>join\nBB6| { (c) 17: phi (27) (16)|14: CMP (27) (13)|15: BLT (14) (20)}"];
+bb7 [shape=record, label="<b>BB7| {16: ADD (27) (7)|18: branch [17]}"];
+bb8 [shape=record, label="<b>BB8| {20: ADD (26) (19)|24: branch [21]}"];
+bb9 [shape=record, label="<b>BB9| {29: branch [25]}"];
+bb10 [shape=record, label="<b>BB10| {30: \<empty\>}"];
+}

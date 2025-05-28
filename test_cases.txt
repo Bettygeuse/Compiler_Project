@@ -1,0 +1,151 @@
+main  
+var x,x2,x3; { 
+    if x2 == 0 + 2 then 
+        let x3 <- 1 + 2; 
+        let x <- 4 + 2; 
+
+        if x > 0 then
+            let x <- x + 1;
+        fi
+        
+    else 
+        let x2 <- x;
+
+        if x <= 0 then
+            let x <- call InputNum();
+
+            if x2 > 300 then 
+                let x2 <- 40;
+            fi
+        fi
+    fi ;
+
+    call OutputNum(x + 3)
+} .
+
+main  
+var a, b, c, d, e; { 
+    let a <- call InputNum();
+    let b <- a;
+    let c <- b;
+    let d <- b + c;
+    let e <- a + b;
+    if a < 0  then  let d <- d + e; let a <- d else  let d <- e  fi;
+    call OutputNum(a)
+} .
+
+main
+var a, b, c, d; {
+    let a <- 2;
+    let b <- a * 4;
+    let c <- 1;
+    let d <- 5;
+
+    if a > 0 then
+        let c <- a + b;
+        if c > b then
+            if d > 2 then
+                let a <- 10;
+            fi
+        else
+            let d <- 4;
+        fi;
+        let c <- 10;
+        if c < a then
+            let d <- 8;
+        fi
+    else
+        let c <- a + d;
+    fi
+}.
+
+main
+var a, b, c, d; {
+    let a <- call InputNum();
+
+    if a > 5  then  
+        let a <- 7 + 10
+        while a < 5 do
+            let a <- a + 1
+        od  
+    else  
+        let a <- 7 + 10
+        while a < 5 do
+            let a <- a + 1
+        od  
+    fi;
+
+    let b <- a + 5
+    call OutputNum(b)
+}.
+
+main
+var a, b, c, d; {
+    let a <- call InputNum();
+
+    if a > 5  then  
+        while a < 5 do
+            let a <- a + 1
+        od
+        
+    else    
+
+        let c <- 7 + 1
+    fi;
+
+    let b <- a + 5
+    call OutputNum(b)
+}.
+
+main
+var a, b, c, d; {
+    let a <- call InputNum();
+
+    while a < 5 do
+        let a <- a + 1
+        while b < 5 do
+            let b <- b + 1
+        od
+        let a <- a + 100
+    od
+        
+    let b <- a + 5
+    call OutputNum(b)
+}.
+
+main
+var a, b, c, d; {
+    let a <- call InputNum();
+
+    if a > 5  then  
+        let a <- 7 + 10
+        while a < 5 do
+            let a <- a + 1
+            while a < 5 do
+                let a <- a + 1
+                if a > 5  then  
+                    let a <- 7 + 10
+                else  
+                    let a <- 7 + 10
+                fi;
+            od  
+        od  
+    else  
+        let a <- 7 + 10
+        while a < 5 do
+            let a <- a + 1
+            while a < 5 do
+                let a <- a + 1
+                if a > 5  then  
+                    let a <- 7 + 10
+                else  
+                    let a <- 7 + 10
+                fi;
+            od  
+            let a <- 100 + 200
+        od  
+    fi;
+
+    let b <- a + 5
+    call OutputNum(b)
+}.
