@@ -2,5 +2,8 @@ A custom compiler built as a final project. Parses the SMPL coding language from
 
 Graph visualizer: https://dreampuf.github.io/GraphvizOnline/?engine=dot
 
-Example Conversion: 
-![alt text](https://github.com/Bettygeuse/Compiler_Project/blob/main/input_example.png "SMPL Language") ![alt text](https://github.com/Bettygeuse/Compiler_Project/blob/main/IR_example.png "Intermediate Representation")
+Example Conversion:  
+
+![alt text](https://github.com/Bettygeuse/Compiler_Project/blob/main/input_example.png "SMPL Language") 
+
+![alt text](https://github.com/Bettygeuse/Compiler_Project/blob/main/IR_example.png "Intermediate Representation")
